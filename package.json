@@ -1,0 +1,27 @@
+{
+  "name": "rn-app-modifier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mykola Polotnianko <nikpolale@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@expo/config-plugins": "^4.1.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  }
+}
