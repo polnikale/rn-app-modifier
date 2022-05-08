@@ -26,7 +26,7 @@ const renameAndroid = async () => {
 
   const BASE_PATH = path.join(process.cwd(), 'android');
 
-  const replacedMentions = await replace.replaceInFile({
+  await replace.replaceInFile({
     files: getAndroidFilesToEdit(initialName).map((fileName) =>
       path.join(BASE_PATH, fileName),
     ),
@@ -34,16 +34,14 @@ const renameAndroid = async () => {
     to: nextName,
   });
 
-  const res = fs.renameSync(
+  fs.renameSync(
     path.join(BASE_PATH, 'app/src/main/java/com', initialName),
     path.join(BASE_PATH, 'app/src/main/java/com', nextName),
   );
-  const res2 = fs.renameSync(
+  fs.renameSync(
     path.join(BASE_PATH, 'app/src/debug/java/com', initialName),
     path.join(BASE_PATH, 'app/src/debug/java/com', nextName),
   );
-
-  console.log('replace', replacedMentions, res, res2);
 };
 
 renameAndroid();
